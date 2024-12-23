@@ -27,6 +27,7 @@
 #include "transforms/samples_count.h"
 #include "transforms/scale_transform.h"
 #include "transforms/moving_average_filter.h"
+#include "transforms/moving_average_residual.h"
 #include "transforms/moving_variance.h"
 #include "transforms/moving_rms.h"
 #include "transforms/outlier_removal.h"
@@ -239,6 +240,7 @@ int main(int argc, char* argv[])
   TransformFactory::registerTransform<FirstDerivative>();
   TransformFactory::registerTransform<ScaleTransform>();
   TransformFactory::registerTransform<MovingAverageFilter>();
+  TransformFactory::registerTransform<MovingAverageResidual>();
   TransformFactory::registerTransform<MovingRMS>();
   TransformFactory::registerTransform<OutlierRemovalFilter>();
   TransformFactory::registerTransform<IntegralTransform>();
